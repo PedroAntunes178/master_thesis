@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% presentation_iobsoc.tex
+
+%% IOb-SoC slides for the Thesis Presentation
+
+%% Author: Pedro Miranda
+%% Created: 5 Jan 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% IOb-SoC
+\begin{frame}
+  \frametitle{IOb-SoC Hardware Platform}
+  Open source RISC-V SoC platform by IObundle.  
+\vspace{0.5cm}
+  \begin{columns}
+  \column{0.4\textwidth}
+  Main components:
+  \begin{itemize}
+    \item PicoRV32 RISC-V CPU
+    \item Internal memory
+      %% \begin{itemize}
+      %% \item SRAM memory
+      %% \item Boot controller
+      %% \end{itemize}
+    \item External memory
+      \begin{itemize}
+      \item Single level cache
+      \end{itemize}
+    \item UART
+    \item Integrated Peripherals:
+      \begin{itemize}
+      \item \textbf{Timer}
+      \item \textbf{Ethernet}
+      \item \textbf{VersatCNN}
+      \end{itemize}  
+  \end{itemize}
+  \column{0.6\textwidth}
+\end{columns}
+\vspace{1cm}
+  \begin{block}{}
+  Continuous integration of system and new components.\newline
+  Development of testing environment.
+  \end{block}
+\end{frame}
+
+%% Present the IOb-SoC platform.
+%% Developed by IObundle and other prior thesis works.
+%% Platform was in constant development at the time of the work. And still is.
+%% Explain main components: RISC-V CPU, memory system.
+%% RISC-CPU PicoRV32 soft CPU core
+%% 4 CPI, programmed with GNU compiler toolchain
+%% Internal memory: Static RAM (SRAM) and boot controller
+%% External memory: connection mediated by single level cache
+%% Peripherals: UART comes by default
+%% Other peripherals: TIMER, ETHERNET, VersatCNN
+
+
+
+
+%% \begin{frame}
+%%   \frametitle{IOb-SoC Peripherals}
+%%   \begin{block}{UART}
+%%     \begin{itemize}
+%%     \item Enables serial communication at a specified \texttt{Baud Rate}.
+%%     \item Used to receive the Tiny YOLOv3 program and send basic user runtime
+%%       messages.
+%%       \end{itemize}
+%%   \end{block}
+%%   %% \begin{block}{Timer}
+%%   %%   \begin{itemize}
+%%   %%     \item Hardware counter with system clock resolution.
+%%   %%     \item Used to measure system performance.
+%%   %%   \end{itemize}
+%%   %% \end{block}
+%%   \begin{block}{Ethernet}
+%%     \begin{itemize}
+%%     \item Enable ethernet communication up to 100 Mbps using raw sockets.
+%%     \item Used to receive the input files from the host PC and send back the
+%%       output image.
+%%     \end{itemize}
+%%   \end{block}
+%% \end{frame}
+%% Briefly explain peripherals and use in the application.
+
+
+
+\begin{frame}
+  \frametitle{IOb-SoC Profiling Results}
+
+  Embedded version of Tiny YOLOv3 application:
+  \begin{itemize}
+  \item Executed exclusively on RISC-V CPU
+  \item 143~MHz system clock.
+  \end{itemize}
+  
+\begin{table}[!htb]
+	\renewcommand{\arraystretch}{1.2} % more space between rows
+	\centering
+	\begin{tabular}{|l|r|}
+          \hline
+		Tiny YOLOv3 Part          & Execution Time (s)\\ \hline
+		Pre-CNN	                  & 1.040\\ \hline
+		CNN		          & 967.746\\ \hline
+		Post-CNN	          & 0.014\\ \hline
+                Total                     & 968.800\\ \hline
+                \textbf{Target (30 FPS)}  & \textbf{0.033} \\ \hline
+	\end{tabular}
+	\caption{Tiny YOLOv3 RISC-V-only performance.}
+\end{table}
+
+\textbf{Conclusion:} all parts of the application require acceleration.
+\end{frame}
+
+%% Present Profiling Results.

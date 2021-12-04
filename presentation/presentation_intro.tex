@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% presentation_intro.tex
+
+%% Introduction slides for the Thesis Presentation
+
+%% Author: Pedro Miranda
+%% Created: 5 Jan 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Content frames
+\begin{frame}
+  \frametitle{Presentation Outline}
+  \begin{itemize}
+    %% \item Motivation (use of CGRAs, etc)
+  \item Introduction
+    \begin{itemize}
+    \item Motivation and problem
+    \item Proposed solution and thesis objectives
+    \end{itemize}
+  \item Hardware platform (IOb-SoC)
+    \begin{itemize}
+      \item Integrate additional peripherals
+      %% \item Establish a testing environment
+      \item Profile Tiny YOLOv3 application
+    \end{itemize}
+  \item VersatCNN acceleration
+    \begin{itemize}
+    \item VersatCNN dataflow configuration
+    \item Tiny YOLOv3 acceleration strategies
+      \begin{itemize}
+      \item CNN inference
+      \item Pre and post-processing
+      \end{itemize}
+    \end{itemize}
+  \item Results and Conclusions
+    \begin{itemize}
+      \item Comparison with other platforms and works
+      \item Achievements and future improvements
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+%% This slide presents outlines the work and the presentation structure.
+%% Is used to give the audience a road map for the presentation.
+
+%% The work requires the establishment of a testing environment. For that we use
+%% the IOb-SoC as an hardware platform to which we add more peripherals.
+%% At the end, the Tiny YOLOv3 is profiled running of the baseline system to
+%% identify the target functions to accelerate.
+
+%% After that, the VersatCNN is added as a system peripheral. The Tiny YOLOv3
+%% acceleration requires different strategies, which are reflected in different
+%% datapath configurations.
+
+%% The presentation concludes with a discussion of the obtained results and a
+%% comparison with other Tiny YOLOv3 implementations for FPGAs. 
+
+
+\begin{frame}
+  \frametitle{Motivation}
+  \begin{itemize}
+  \item Object detection is usefull in multiple areas of application
+    (navigation, medical, security)
+    \begin{itemize}
+    \item Most accurate methods use CNN inference.
+      \item \textbf{Problem:} Computationally demanding process.
+    \end{itemize}
+  \item Current solutions based on GPU acceleration.
+    \begin{itemize}
+      \item Oversized and power-hungry.
+    \end{itemize}
+  \item Alternative accelerators also have limitations:
+    \begin{itemize}
+    \item FPGA: better size/power efficiency than GPU, with configuration
+      overhead and increased development time.
+    \item ASIC: dedicated accelerators lack hardware programmability.
+    \end{itemize}
+  \item \textbf{Proposed solution:} CGRA
+    \begin{itemize}
+    \item Optimized area and power.
+    \item Faster reconfiguration for FPGA implementation.
+      \item Adds hardware programmability for ASIC implementation.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Thesis Objectives
+\begin{frame}
+  \frametitle{Thesis Goals}
+  Main thesis goals:
+  \begin{itemize}
+  \item Accelerate a Convolutional Neural Network (CNN) for object detection,
+    using the VersatCNN CGRA 
+    \begin{itemize}
+      %% \item Chosen application: Tiny YOLOv3
+    \item Configure CGRA dataflow to efficiently implement the Tiny YOLOv3
+      application
+    %% \item Design CGRA dataflow configurations to accelerate Tiny YOLOv3 kernels
+    \end{itemize}
+  \item Target real-time processing (30 FPS)
+  \end{itemize}
+\end{frame}
+%% The main goal of this Thesis is to use the VersatCNN CGRA to accelerate a CNN
+%% application.
+
+%% Tiny YOLOv3 is the CNN chosen.
+
+%% The project has real-time (30 FPS) target performance.
+

@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% presentation_preamble.tex
+
+%% Preamble for the Thesis Presentation
+
+%% Author: Pedro Miranda
+%% Create: 4 Jan 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Include packages
+\usepackage[utf8]{inputenc}
+\usepackage[UKenglish]{babel}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eso-pic}
+\usepackage[nodayofweek,level]{datetime}
+\usepackage{url}
+\usepackage{siunitx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{epstopdf}
+%---
+\graphicspath{{images/}}
+%---
+% remove beamer navigation symbols from pages
+\beamertemplatenavigationsymbolsempty
+% add slide numbers
+\setbeamertemplate{footline}[frame number]
+%---
+\newcommand\AtPagemyUpperLeft[3]{\AtPageLowerLeft{%
+\put(\LenToUnit{#2\paperwidth},\LenToUnit{#3\paperheight}){#1}}}
+
+\AddToShipoutPictureFG{
+    \AtPagemyUpperLeft{{\includegraphics[width=2cm,keepaspectratio]{LogoIST.jpg}}}{0.8}{0.9}
+}
+
+\usepackage[para,online,flushleft]{threeparttable} % tables with comments
+
+% C code
+\usepackage{listings}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  captionpos=b,
+  numbers=none,
+  numbersep=5pt,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+
+\lstset{escapechar=@,style=customc}
+
+% bibliography
+% bibliographic references
+\usepackage[backend=biber]{biblatex}
+\addbibresource{presentation_ref.bib}
+
+%% tables with fixed column width
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+% Subfigures
+\usepackage{subfigure}
+\usepackage{subfigmat}

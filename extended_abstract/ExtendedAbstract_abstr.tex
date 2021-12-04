@@ -1,0 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     File: ExtendedAbstract_abstr.tex                               %
+%     Tex Master: ExtendedAbstract.tex                               %
+%                                                                    %
+%     Author: Andre Calado Marta                                     %
+%     Last modified : 2 Dez 2011                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The abstract of should have less than 500 words.
+% The keywords should be typed here (three to five keywords).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Abstract
+%%
+\begin{abstract}
+
+The objective of this work is to accelerate an object detection application
+using the VersatCNN, a Coarse Grained Reconfigurable Array (CGRA) architecture
+developed for efficient inference of Convolutional Neural Network (CNN). The
+performance objective is to enable real-time execution - 30 frames per second -
+on low-end embedded systems.
+The object detection application accelerated is the Tiny YOLOv3, based on a CNN
+developed for constrained environments. The Tiny YOLOv3 network is composed of
+Convolutional, Maxpool, Route, Upsample and Yolo layers. The application also
+includes pre and post-processing routines. 
+This thesis work uses the IOb-SoC, a RISC-V based system on a chip (SoC) from
+IObundle as a baseline hardware platform for the project development.
+Peripheral modules for measuring performance and enabling ethernet communication
+are integrated into the IOb-SoC. The embedded version of Tiny YOLOv3 is
+profilled for RISC-V only execution to identify the parts that require
+acceleration. The VersatCNN is integraded into the system as a peripheral. The
+work mainly focuses on the design of CGRA dataflow configurations, as the
+different parts of the application require distinct configuration strategies for
+the multiple layer types and the pre and post-processing routines. 
+The final system achieves over 30 FPS for the complete Tiny YOLOv3, with a clock
+frequency of 143~MHz and a 832x parallelism factor for convolutional operations.
+\newline
+\\
+%%
+%% Keywords (max 5)
+%%
+\noindent{{\bf Keywords:}} Object Detection, Convolutional Neural Networks,
+Systems on Chip, Coarse Grained Reconfigurable Arrays. \\
+
+\end{abstract}
+

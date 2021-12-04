@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% presentation.tex
+
+%% Main file for the Thesis Presentation
+
+%% Author: Pedro Antunes
+%% Create: 02 Dec 2021
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{beamer}
+
+%% Include preamble
+\input{presentation_preamble}
+
+% Title page definitions
+
+\title{Linux capable RISC-V CPU for IOb-SoC}
+\subtitle{Thesis to obtain the Master of Science Degree in \\ \textbf{Electrical and Computer Engineering}}
+\author{Pedro Nuno de Melo Antunes}
+  
+\institute[IST]{Instituto Superior T\'{e}cnico}
+\date{13th January 2022}
+
+
+%% Document
+\begin{document}
+
+% Title/Cover page
+\begin{frame}
+%% \begin{figure}
+%% 	\centering
+%% 	\includegraphics[width=0.35\textwidth]{predictions.png}
+%% \end{figure}
+%% \vspace{-1cm}
+  \titlepage
+  \begin{table}
+    \centering
+	\begin{tabular}{ll}
+             Supervisors: & Prof. José Teixeira de Sousa \\
+	\end{tabular}
+\end{table}
+
+\end{frame}
+%\frame{\titlepage}
+
+% Table of contents (Optional)
+%% \begin{frame}
+%% \frametitle{Outline}
+%% \tableofcontents
+%% \end{frame}
+
+% Other presentation slides
+
+% Introduction
+\input{presentation_intro}
+
+% IOb-SoC
+\input{presentation_iobsoc}
+
+% (Optional) Extra slides
+\input{presentation_extra}
+
+\end{document}
