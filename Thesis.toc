@@ -1,11 +1,11 @@
 \babel@toc {english}{}
-\contentsline {section}{Acknowledgments}{vii}{section*.2}% 
-\contentsline {section}{Resumo}{ix}{section*.3}% 
-\contentsline {section}{Abstract}{xi}{section*.4}% 
-\contentsline {section}{List of Tables}{xv}{section*.6}% 
-\contentsline {section}{List of Figures}{xvii}{section*.8}% 
-\contentsline {section}{Listing}{xix}{section*.10}% 
-\contentsline {section}{List of Acronyms}{xxi}{section*.12}% 
+\contentsline {section}{Acknowledgments}{v}{section*.2}% 
+\contentsline {section}{Resumo}{vii}{section*.3}% 
+\contentsline {section}{Abstract}{ix}{section*.4}% 
+\contentsline {section}{List of Tables}{xiii}{section*.6}% 
+\contentsline {section}{List of Figures}{xv}{section*.8}% 
+\contentsline {section}{Listing}{xvii}{section*.10}% 
+\contentsline {section}{List of Acronyms}{xix}{section*.12}% 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Objectives}{1}{section.1.2}% 
