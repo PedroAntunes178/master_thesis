@@ -1,4 +1,4 @@
-\chapter{Linux on RISC-V Background}
+\chapter{Background}
 \label{chapter:background}
 
 \quad In this chapter some of the tecnologies used to develop this work will be described.
@@ -7,7 +7,16 @@
 % the art revision}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{RISC-V}
+\quad In order to understand the RISC-V architectures that are used by current processor families, first it is essential to understand RISC.
 
+\section{Linux}
 
+\section{Verilog}
+
+\section{IOb-SoC}
+\quad Building processor-based systems from scratch is challenging. The IOb-SoC is a System-on-Chip (SoC) template that eases this task by providing a base Verilog SoC equipped with an open-source RISC-V processor (picorv32), an internal SRAM memory subsystem, a UART (iob-uart), and an optional interface to an external memory. If the external memory interface is selected, an instruction L1 cache, a data L1 cache and a shared L2 cache are added to the system. The L2 cache communicates with a 3rd party memory controller IP (typically a DDR controller) using an AXI4 master bus. To help getting started it also comes with an example firmware program. Finnaly, users can add IP cores and software to easily build their SoCs.
+
+\section{cocoTb}
+https://indico.cern.ch/event/860269/attachments/1955631/3256707/mdt_cocotb_talk.pdf
 
 \newpage
